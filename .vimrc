@@ -158,9 +158,16 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 call plug#begin()
 " The bang version will try to download the prebuilt binary if cargo does not exist.
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'sheerun/vim-polyglot'
 Plug 'justinmk/vim-sneak'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-fugitive'
 call plug#end()
