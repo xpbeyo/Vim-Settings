@@ -171,3 +171,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 call plug#end()
+
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
