@@ -157,20 +157,3 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
-
-" NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
-call plug#begin()
-" The bang version will try to download the prebuilt binary if cargo does not exist.
-Plug 'sheerun/vim-polyglot'
-Plug 'justinmk/vim-sneak'
-Plug 'preservim/nerdtree'
-Plug 'tpope/vim-fugitive'
-call plug#end()
-
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
